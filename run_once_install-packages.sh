@@ -29,6 +29,7 @@ packages=(
 	lxappearance-gtk3
 	pavucontrol
 	sxhkd
+    brightnessctl
 )
 
 # ┌────────────────────────────┐
