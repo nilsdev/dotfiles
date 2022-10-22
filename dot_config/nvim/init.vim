@@ -16,5 +16,5 @@ endif
 unlet autoload_plug_path
 
 call plug#begin()
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'nvim-treesitter/nvim-treesitter'
 call plug#end()
