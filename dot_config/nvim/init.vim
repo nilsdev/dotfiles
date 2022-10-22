@@ -5,6 +5,7 @@ source $HOME/.config/nvim/themes/mountain.vim
 luafile $HOME/.config/nvim/lua/init.lua
 
 autocmd BufWritePost ~/.local/share/chezmoi/* ! chezmoi apply --source-path "%"
+" asd
 
 " Bootstrap Plug
 let autoload_plug_path = stdpath('data') . '/site/autoload/plug.vim'
