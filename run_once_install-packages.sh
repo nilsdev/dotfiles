@@ -1,5 +1,19 @@
 #!/usr/bin/bash
 
+# ┌──────────────────────────────────────────────┐
+# │ check for yay and install if it doesnt exist │
+# └──────────────────────────────────────────────┘
+
+if pacman -Q "yay" > /dev/null 2>&1; then 
+	echo -e "yay \t-> is installed" 
+else
+	pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git ~/yay && cd ~/yay && makepkg -si
+fi
+
+# ┌───────────────────┐
+# │ required packages │
+# └───────────────────┘
+
 packages=(
 	neovim
 	htop
@@ -12,13 +26,9 @@ packages=(
 	wl-clipboard
 )
 
-if pacman -Q "yay" > /dev/null 2>&1; then 
-	echo -e "yay \t-> is installed" 
-else
-	pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git ~/yay && cd ~/yay && makepkg -si
-fi
-
-
+# ┌────────────────────────────┐
+# │ check and install packages │
+# └────────────────────────────┘
 
 for package in ${packages[@]}; do 
 	if pacman -Q "$package" > /dev/null 2>&1; then 
