@@ -25,7 +25,7 @@ packages=(
 	python
 	ranger
 	wl-clipboard
-	lxappearance
+	#lxappearance
 	lxappearance-gtk3
 	pavucontrol
 	sxhkd
