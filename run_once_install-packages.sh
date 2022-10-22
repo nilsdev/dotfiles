@@ -7,7 +7,7 @@
 if pacman -Q "yay" > /dev/null 2>&1; then 
 	echo -e "yay \t-> is installed" 
 else
-	pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git ~/yay && cd ~/yay && makepkg -si
+ 	sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay.git ~/yay && cd ~/yay && makepkg -si -y 
 fi
 
 # ┌───────────────────┐
@@ -21,9 +21,14 @@ packages=(
 	zsh
 	firefox
 	kitty
-	hyprland
+	hyprland-bin
 	python
+	ranger
 	wl-clipboard
+	lxappearance
+	lxappearance-gtk3
+	pavucontrol
+	sxhkd
 )
 
 # ┌────────────────────────────┐
