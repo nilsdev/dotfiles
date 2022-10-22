@@ -9,6 +9,7 @@ packages=(
 	kitty
 	hyprland
 	python
+	wl-clipboard
 )
 
 if pacman -Q "yay" > /dev/null 2>&1; then 
