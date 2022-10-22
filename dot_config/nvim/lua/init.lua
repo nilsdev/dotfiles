@@ -1,10 +1,14 @@
 local opt = vim.opt
 local g = vim.g
--- # GENERAL SETTINGS
+-- ┌──────────────────┐
+-- │ general settings │
+-- └──────────────────┘
 opt.undofile = true 
 opt.undodir = "/home/nils/.cache"
 
--- indent
+-- ┌────────────────┐
+-- │ tabs vs spaces │
+-- └────────────────┘
 opt.smartindent = true
 opt.autoindent = true 
 opt.tabstop = 4
@@ -12,27 +16,30 @@ opt.shiftwidth = 4
 opt.expandtab = true
 
 
--- set clipboard to system
+-- ┌───────────────┐
+-- │ fix clipboard │
+-- └───────────────┘
 opt.clipboard = "unnamedplus"
 
--- ui settings 
+-- ┌─────────────┐
+-- │ ui settings │
+-- └─────────────┘
 vim.o.relativenumber = true
 
--- PLUGIN SETTINGS
--- require'nvim-treesitter.configs'.setup {
---   highlight = {
---     enable = true,
---     -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
---     -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
---     -- Using this option may slow down your editor, and you may see some duplicate highlights.
---     -- Instead of true it can also be a list of languages
---     additional_vim_regex_highlighting = false,
---   },
--- }
--- 
--- 
--- -- LSP Setup
--- require'lspconfig'.rnix.setup{}
+-- ┌─────────────────┐
+-- │ plugin settings │
+-- └─────────────────┘
+require'nvim-treesitter.configs'.setup {
+  highlight = {
+    enable = true,
+    additional_vim_regex_highlighting = false,
+  },
+}
+
+-- ┌────────────────────────────────────────────────────────┐
+-- │ extra lsp settings (TODO move to async file in future) │
+-- └────────────────────────────────────────────────────────┘
+
 -- require'lspconfig'.clangd.setup{}
 -- 
 -- -- autocomplete with lsp
