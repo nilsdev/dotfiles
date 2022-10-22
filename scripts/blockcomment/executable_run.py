@@ -2,10 +2,6 @@
 
 from sys import argv
 
-┌─────┐
-│ hey │
-└─────┘
-
 del argv[0]
 input = ' '.join(argv)
 
